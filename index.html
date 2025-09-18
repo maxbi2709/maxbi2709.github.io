@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Full Stack Developer, Blockchain Developer, Casino Game Developer" />
   <title>Harry Rauramo</title>
+  <meta name="description" content="Full Stack Developer, Blockchain Developer, Casino Game Developer" />
 
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -12,11 +12,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/styles.min.css" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 </head>
-
 <body>
   <!-- Video background -->
   <div class="video-background">
@@ -31,21 +27,17 @@
     <div class="card-body"></div>
   </div>
 
-  <!-- Other cards container -->
   <div class="cards-container"></div>
 
   <!-- JS Libraries -->
   <script src="/js/ua-parser.min.js"></script>
   <script src="/js/terminal.min.js"></script>
-  <script src="/js/analytics.min.js"></script>
 
   <!-- Terminal Script -->
   <script>
-    // Initialize UAParser
     var parser = new UAParser();
     var ua = parser.getResult();
 
-    // Terminal commands
     var commands = [
       { text: "Detecting system...", typing: true },
       { text: "Browser: " + ua.browser.name + " " + ua.browser.version, typing: true },
@@ -54,17 +46,13 @@
       { text: "Done!", typing: true }
     ];
 
-    // Run terminal
     new Terminal({
       container: document.querySelector(".card-body"),
       commands: commands,
       typingSpeed: 80,
       pause: 600,
-      cursor: true  // blinking cursor
+      cursor: true
     });
   </script>
-
-  <!-- Main App Script -->
-  <script src="/js/app.min.js"></script>
 </body>
 </html>
